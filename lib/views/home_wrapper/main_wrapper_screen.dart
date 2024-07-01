@@ -21,9 +21,9 @@ class MainWrapperScreen extends StatelessWidget {
         onPageChanged: controller.animateToTab,
         physics: const BouncingScrollPhysics(),
         children: [
-          HomeScreen(),
+          const HomeScreen(),
           RecordScreen(),
-          ProfileScreen(),
+          const ProfileScreen(),
         ],
       ),
       bottomNavigationBar: Obx(() => BottomAppBar(
