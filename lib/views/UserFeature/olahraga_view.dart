@@ -1,7 +1,6 @@
 import 'package:cardi_care/shared/theme.dart';
 import 'package:cardi_care/views/widgets/buttons.dart';
 import 'package:flutter/material.dart';
-import 'package:cardi_care/shared/theme.dart';
 import 'package:intl/intl.dart';
 
 class OlahragaView extends StatefulWidget {
