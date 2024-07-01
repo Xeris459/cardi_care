@@ -55,14 +55,14 @@ class ProfileScreen extends StatelessWidget {
           const SizedBox(
             height: 64,
           ),
-          ProfileButtons(title: 'Pengaturan'),
-          ProfileButtons(title: 'Riwayat'),
-          ProfileButtons(title: 'Obat'),
+          const ProfileButtons(title: 'Pengaturan'),
+          const ProfileButtons(title: 'Riwayat'),
+          const ProfileButtons(title: 'Obat'),
         ],
       ),
       bottomNavigationBar: BottomAppBar(
         color: whiteColor,
-        child: CustomRedButton(title: 'Keluar'),
+        child: const CustomRedButton(title: 'Keluar'),
       ),
     );
   }

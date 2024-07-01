@@ -47,7 +47,7 @@ class RecordScreen extends StatelessWidget {
               controller: controller.pageController,
               onPageChanged: controller.animateToTab,
               physics: const BouncingScrollPhysics(),
-              children: [
+              children: const [
                 RecordHari(),
                 RecordMinggu(),
                 RecordBulan(),
