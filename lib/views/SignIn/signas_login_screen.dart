@@ -1,7 +1,6 @@
 import 'package:cardi_care/routes.dart';
 import 'package:cardi_care/shared/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class SignasLoginScreen extends StatelessWidget {

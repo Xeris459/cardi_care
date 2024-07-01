@@ -4,7 +4,6 @@ import 'package:cardi_care/views/Record/record_hari.dart';
 import 'package:cardi_care/views/Record/record_minggu.dart';
 import 'package:cardi_care/views/Record/record_screen_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
