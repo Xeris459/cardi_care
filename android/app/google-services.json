@@ -1,29 +1,29 @@
 {
-  "project_info": {
-    "project_number": "197046408067",
-    "project_id": "cardi-care-63559",
-    "storage_bucket": "cardi-care-63559.appspot.com"
-  },
-  "client": [
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:197046408067:android:712dafec22d963133c5cb6",
-        "android_client_info": {
-          "package_name": "com.example.cardi_care"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBDb9zm9LK09xPm3Vd0b4_OQkCSH2unpXU"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    }
-  ],
-  "configuration_version": "1"
+	"project_info": {
+		"project_number": "187909067652",
+		"project_id": "teka-teki-silang-71ac4",
+		"storage_bucket": "teka-teki-silang-71ac4.appspot.com"
+	},
+	"client": [
+		{
+			"client_info": {
+				"mobilesdk_app_id": "1:187909067652:android:7fdf33dfe8878ab8e4c3d1",
+				"android_client_info": {
+					"package_name": "com.example.cardi_care"
+				}
+			},
+			"oauth_client": [],
+			"api_key": [
+				{
+					"current_key": "AIzaSyC-Yoa2QnMzXGuqAQRpOv9ecRIJDmkVklU"
+				}
+			],
+			"services": {
+				"appinvite_service": {
+					"other_platform_oauth_client": []
+				}
+			}
+		}
+	],
+	"configuration_version": "1"
 }

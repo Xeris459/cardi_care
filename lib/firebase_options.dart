@@ -41,46 +41,49 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDYH4WSXpUviE0wSqhll-Vqq9jsATsV9OE',
-    appId: '1:197046408067:web:da8b4c54c6be020e3c5cb6',
-    messagingSenderId: '197046408067',
-    projectId: 'cardi-care-63559',
-    authDomain: 'cardi-care-63559.firebaseapp.com',
-    storageBucket: 'cardi-care-63559.appspot.com',
+    apiKey: 'AIzaSyAzncqrbwHii044PGQ1ra4TJ0v91y_f8Nc',
+    appId: '1:187909067652:web:a479c22a4a0895dee4c3d1',
+    messagingSenderId: '187909067652',
+    projectId: 'teka-teki-silang-71ac4',
+    authDomain: 'teka-teki-silang-71ac4.firebaseapp.com',
+    storageBucket: 'teka-teki-silang-71ac4.appspot.com',
+    measurementId: 'G-JYZEYFE9FX',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBDb9zm9LK09xPm3Vd0b4_OQkCSH2unpXU',
-    appId: '1:197046408067:android:712dafec22d963133c5cb6',
-    messagingSenderId: '197046408067',
-    projectId: 'cardi-care-63559',
-    storageBucket: 'cardi-care-63559.appspot.com',
+    apiKey: 'AIzaSyC-Yoa2QnMzXGuqAQRpOv9ecRIJDmkVklU',
+    appId: '1:187909067652:android:7fdf33dfe8878ab8e4c3d1',
+    messagingSenderId: '187909067652',
+    projectId: 'teka-teki-silang-71ac4',
+    storageBucket: 'teka-teki-silang-71ac4.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBgNmeiHEUATHqj-Oufndz2c5RC7vj49Zo',
-    appId: '1:197046408067:ios:f0391add67eb28a33c5cb6',
-    messagingSenderId: '197046408067',
-    projectId: 'cardi-care-63559',
-    storageBucket: 'cardi-care-63559.appspot.com',
+    apiKey: 'AIzaSyD9nlK0t7GWMLmITyHeBsJGIbVyvhZ4oEE',
+    appId: '1:187909067652:ios:094e8e5a693787c3e4c3d1',
+    messagingSenderId: '187909067652',
+    projectId: 'teka-teki-silang-71ac4',
+    storageBucket: 'teka-teki-silang-71ac4.appspot.com',
     iosBundleId: 'com.example.cardiCare',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBgNmeiHEUATHqj-Oufndz2c5RC7vj49Zo',
-    appId: '1:197046408067:ios:f0391add67eb28a33c5cb6',
-    messagingSenderId: '197046408067',
-    projectId: 'cardi-care-63559',
-    storageBucket: 'cardi-care-63559.appspot.com',
+    apiKey: 'AIzaSyD9nlK0t7GWMLmITyHeBsJGIbVyvhZ4oEE',
+    appId: '1:187909067652:ios:094e8e5a693787c3e4c3d1',
+    messagingSenderId: '187909067652',
+    projectId: 'teka-teki-silang-71ac4',
+    storageBucket: 'teka-teki-silang-71ac4.appspot.com',
     iosBundleId: 'com.example.cardiCare',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyDYH4WSXpUviE0wSqhll-Vqq9jsATsV9OE',
-    appId: '1:197046408067:web:850680faff3a2a993c5cb6',
-    messagingSenderId: '197046408067',
-    projectId: 'cardi-care-63559',
-    authDomain: 'cardi-care-63559.firebaseapp.com',
-    storageBucket: 'cardi-care-63559.appspot.com',
+    apiKey: 'AIzaSyAzncqrbwHii044PGQ1ra4TJ0v91y_f8Nc',
+    appId: '1:187909067652:web:091dd1a05b15ddf1e4c3d1',
+    messagingSenderId: '187909067652',
+    projectId: 'teka-teki-silang-71ac4',
+    authDomain: 'teka-teki-silang-71ac4.firebaseapp.com',
+    storageBucket: 'teka-teki-silang-71ac4.appspot.com',
+    measurementId: 'G-7PSV91P93K',
   );
+
 }

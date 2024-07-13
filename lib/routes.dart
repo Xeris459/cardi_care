@@ -14,6 +14,7 @@ import 'package:cardi_care/views/signup_keluarga_screen.dart';
 import 'package:cardi_care/views/signup_pasien_screen.dart';
 import 'package:cardi_care/views/splash_screen.dart';
 import 'package:get/get.dart';
+import 'package:cardi_care/views/TekaTekiSilang/tekaTekiSilangPage.dart';
 
 class Routes {
   static String splash = '/';
@@ -34,6 +35,7 @@ class Routes {
   static String userBerat = '/user_berat';
   static String userCairan = '/user_cairan';
   static String userMerokokAlkohol = '/user_merokok_alkohol';
+  static String tekaTekiSilang = '/teka-teki-silang';
 
   static List<GetPage> routes = [
     GetPage(
@@ -95,6 +97,10 @@ class Routes {
     GetPage(
       name: userMerokokAlkohol,
       page: () => const MerokokAlkoholView(),
+    ),
+    GetPage(
+      name: tekaTekiSilang,
+      page: () => const TekaTekiSilangPage(),
     ),
   ];
 }

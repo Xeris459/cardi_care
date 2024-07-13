@@ -6,6 +6,7 @@ import 'package:cardi_care/views/home_wrapper/main_wrapper_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
+import 'package:cardi_care/views/TekaTekiSilang/tekaTekiSilangPage.dart';
 
 class MainWrapperScreen extends StatelessWidget {
   MainWrapperScreen({super.key});
@@ -21,6 +22,7 @@ class MainWrapperScreen extends StatelessWidget {
         onPageChanged: controller.animateToTab,
         physics: const BouncingScrollPhysics(),
         children: [
+          const TekaTekiSilangPage(),
           const HomeScreen(),
           RecordScreen(),
           const ProfileScreen(),
