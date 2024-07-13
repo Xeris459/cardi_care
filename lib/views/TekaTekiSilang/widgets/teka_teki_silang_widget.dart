@@ -36,14 +36,16 @@ class _TekaTekiSilangWidget extends ConsumerState<TekaTekiSilangWidget> {
   }
 
   _buildSpan(BuildContext context, int index) {
-    return TableSpan(
-      extent: const FixedTableSpanExtent(40),
+    return const TableSpan(
+      extent: FixedTableSpanExtent(40),
       foregroundDecoration: TableSpanDecoration(
         border: TableSpanBorder(
           leading: BorderSide(
-              color: Theme.of(context).colorScheme.onPrimaryContainer),
+            color: Colors.black54,
+          ),
           trailing: BorderSide(
-              color: Theme.of(context).colorScheme.onPrimaryContainer),
+            color: Colors.black54,
+          ),
         ),
       ),
     );
@@ -67,18 +69,22 @@ class _TekaTekiSilangWidget extends ConsumerState<TekaTekiSilangWidget> {
                 );
               },
               child: Container(
-                color: Theme.of(context).colorScheme.onPrimary,
+                color: spanActive.value != ''
+                    ? Colors.grey[200]
+                    : Theme.of(context).colorScheme.onPrimary,
                 padding: const EdgeInsets.all(4),
                 child: Stack(
                   children: [
                     floatingNumberCrossword(context, spanActive.number ?? 0),
                     Center(
                       child: Text(
-                        spanActive.value ?? '',
+                        spanActive.value?.toUpperCase() ?? '',
                         style: const TextStyle(
-                            fontSize: 24,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold),
+                          fontSize: 22,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: 'Roboto',
+                        ),
                       ),
                     ),
                   ],

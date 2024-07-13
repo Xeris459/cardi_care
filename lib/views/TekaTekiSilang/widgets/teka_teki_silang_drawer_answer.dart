@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../types/item_datas.dart';
 import '../providers.dart';
@@ -116,6 +117,9 @@ class _State extends ConsumerState<TekaTekiSilangDrawerAnswer> {
                       hintText: 'masukan jawaban anda disini',
                     ),
                     autofocus: true,
+                    inputFormatters: [
+                      UpperCaseTextFormatter(),
+                    ],
                   ),
                   const SizedBox(height: 20),
                   ElevatedButton(
@@ -154,5 +158,16 @@ class _State extends ConsumerState<TekaTekiSilangDrawerAnswer> {
         ),
       );
     }
+  }
+}
+
+class UpperCaseTextFormatter extends TextInputFormatter {
+  @override
+  TextEditingValue formatEditUpdate(
+      TextEditingValue oldValue, TextEditingValue newValue) {
+    return TextEditingValue(
+      text: newValue.text.toUpperCase(),
+      selection: newValue.selection,
+    );
   }
 }
