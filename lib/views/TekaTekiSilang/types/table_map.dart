@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:cardi_care/views/TekaTekiSilang/types/direction.dart';
+import 'direction.dart';
 
 part 'table_map.freezed.dart';
 part 'table_map.g.dart';

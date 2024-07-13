@@ -1,6 +1,6 @@
-import 'package:cardi_care/views/TekaTekiSilang/types/item_datas.dart';
+import 'types/item_datas.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:cardi_care/views/TekaTekiSilang/services/tts_service.dart';
+import 'services/tts_service.dart';
 import 'types/tts.dart';
 import 'types/table_map.dart';
 import 'types/direction.dart';

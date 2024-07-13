@@ -1,10 +1,7 @@
-import 'package:cardi_care/views/TekaTekiSilang/providers.dart';
-import 'package:cardi_care/views/TekaTekiSilang/types/item_datas.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-// import '../providers.dart';
+import '../types/item_datas.dart';
+import '../providers.dart';
 
 class TekaTekiSilangDrawerAnswer extends ConsumerStatefulWidget {
   final int row;

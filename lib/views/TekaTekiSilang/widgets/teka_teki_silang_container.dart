@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:cardi_care/views/TekaTekiSilang/widgets/teka_teki_silang_widget.dart';
+import 'teka_teki_silang_widget.dart';
 import '../providers.dart';
 
 class TekaTekiSilangContainer extends ConsumerWidget {

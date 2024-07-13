@@ -1,8 +1,8 @@
 import 'package:cardi_care/shared/theme.dart';
-import 'package:cardi_care/views/TekaTekiSilang/services/tts_service.dart';
-import 'package:cardi_care/views/TekaTekiSilang/widgets/teka_teki_silang_container.dart';
-import 'package:cardi_care/views/TekaTekiSilang/widgets/teka_teki_silang_drawer_question.dart';
-import 'package:cardi_care/views/TekaTekiSilang/widgets/teka_teki_silang_score.dart';
+import 'services/tts_service.dart';
+import 'widgets/teka_teki_silang_container.dart';
+import 'widgets/teka_teki_silang_drawer_question.dart';
+import 'widgets/teka_teki_silang_score.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

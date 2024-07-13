@@ -1,4 +1,4 @@
-import 'package:cardi_care/views/TekaTekiSilang/models/tts_model.dart';
+import '../models/tts_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 // ignore: constant_identifier_names

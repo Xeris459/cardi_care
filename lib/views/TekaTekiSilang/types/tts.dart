@@ -1,6 +1,6 @@
-import 'package:cardi_care/views/TekaTekiSilang/types/item_datas.dart';
+import 'item_datas.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:cardi_care/views/TekaTekiSilang/types/table_map.dart';
+import 'table_map.dart';
 
 part 'tts.freezed.dart';
 part 'tts.g.dart';
