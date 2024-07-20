@@ -7,6 +7,7 @@ part of 'tts.dart';
 // **************************************************************************
 
 _$TtsImpl _$$TtsImplFromJson(Map<String, dynamic> json) => _$TtsImpl(
+      isLoading: json['isLoading'] as bool,
       name: json['name'] as String,
       col: (json['col'] as num).toInt(),
       row: (json['row'] as num).toInt(),
@@ -21,6 +22,7 @@ _$TtsImpl _$$TtsImplFromJson(Map<String, dynamic> json) => _$TtsImpl(
     );
 
 Map<String, dynamic> _$$TtsImplToJson(_$TtsImpl instance) => <String, dynamic>{
+      'isLoading': instance.isLoading,
       'name': instance.name,
       'col': instance.col,
       'row': instance.row,

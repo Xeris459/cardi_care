@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'teka_teki_silang_widget.dart';
+import 'teka_teki_silang_question.dart';
 import '../providers.dart';
 
 class TekaTekiSilangContainer extends ConsumerWidget {
@@ -20,7 +21,18 @@ class TekaTekiSilangContainer extends ConsumerWidget {
           return const Center(child: Text('No Teka Teki Silang data found'));
         }
 
-        return const TekaTekiSilangWidget();
+        return SingleChildScrollView(
+          physics: const RangeMaintainingScrollPhysics(),
+          child: Column(
+            children: [
+              SizedBox(
+                height: MediaQuery.of(context).size.height / 1.7,
+                child: const TekaTekiSilangWidget(),
+              ),
+              const TekaTekiSilangQuestion(),
+            ],
+          ),
+        );
       },
     );
   }

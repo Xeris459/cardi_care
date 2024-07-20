@@ -2,16 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../providers.dart';
 
-class TekaTekiSilangDrawerQuestion extends ConsumerStatefulWidget {
-  const TekaTekiSilangDrawerQuestion({super.key});
+class TekaTekiSilangQuestion extends ConsumerStatefulWidget {
+  const TekaTekiSilangQuestion({super.key});
 
   @override
   ConsumerState<ConsumerStatefulWidget> createState() => _State();
 }
 
-class _State extends ConsumerState<TekaTekiSilangDrawerQuestion> {
+class _State extends ConsumerState<TekaTekiSilangQuestion> {
   @override
   Widget build(BuildContext context) {
+    bool isLoading = ref.watch(ttsNotifierProvider.notifier).getLoading();
+
     return Container(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height / 1.5,
@@ -24,10 +26,8 @@ class _State extends ConsumerState<TekaTekiSilangDrawerQuestion> {
       ),
       child: Stack(
         children: [
-          if (ref.watch(ttsNotifierProvider.notifier).getLoading())
-            loadingIndicator(),
-          if (!ref.watch(ttsNotifierProvider.notifier).getLoading())
-            questionList(),
+          if (isLoading) loadingIndicator(),
+          if (!isLoading) questionList(),
           Positioned(
             top: 0,
             width: MediaQuery.of(context).size.width,

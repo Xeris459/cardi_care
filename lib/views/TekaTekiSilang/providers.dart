@@ -7,20 +7,22 @@ import 'types/direction.dart';
 
 class TtsNotifier extends StateNotifier<Tts> {
   final TtsService _ttsService;
-  bool isLoading = false;
 
   TtsNotifier(this._ttsService)
-      : super(const Tts(name: '', col: 0, row: 0, items: [], table: []));
+      : super(const Tts(
+            isLoading: true, name: '', col: 0, row: 0, items: [], table: []));
+
+  bool getLoading() {
+    return state.isLoading;
+  }
 
   Future<Tts> getTtsData(String id) async {
-    isLoading = true;
     final ttsData = await _ttsService.getTtsData(id);
     final json = ttsData.toMap();
 
     List<ItemDatas> itemsConverted = [];
 
     for (var jsonItem in json['items']) {
-      print(jsonItem);
       itemsConverted.add(ItemDatas(
         title: jsonItem['title'],
         answer: jsonItem['answer'],
@@ -40,7 +42,9 @@ class TtsNotifier extends StateNotifier<Tts> {
     );
 
     convertToMatrix(state.items, state.col, state.row);
-    isLoading = false;
+
+    state = state.copyWith(isLoading: false);
+
     return state;
   }
 
@@ -49,7 +53,8 @@ class TtsNotifier extends StateNotifier<Tts> {
   }
 
   void clearTts() {
-    state = const Tts(name: '', col: 0, row: 0, items: [], table: []);
+    state = const Tts(
+        isLoading: false, name: '', col: 0, row: 0, items: [], table: []);
   }
 
   List<String> getVerticalQuestion() {

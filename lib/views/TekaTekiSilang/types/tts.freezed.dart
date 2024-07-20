@@ -20,6 +20,7 @@ Tts _$TtsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Tts {
+  bool get isLoading => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   int get col => throw _privateConstructorUsedError;
   int get row => throw _privateConstructorUsedError;
@@ -37,7 +38,8 @@ abstract class $TtsCopyWith<$Res> {
       _$TtsCopyWithImpl<$Res, Tts>;
   @useResult
   $Res call(
-      {String name,
+      {bool isLoading,
+      String name,
       int col,
       int row,
       List<ItemDatas> items,
@@ -56,6 +58,7 @@ class _$TtsCopyWithImpl<$Res, $Val extends Tts> implements $TtsCopyWith<$Res> {
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? isLoading = null,
     Object? name = null,
     Object? col = null,
     Object? row = null,
@@ -63,6 +66,10 @@ class _$TtsCopyWithImpl<$Res, $Val extends Tts> implements $TtsCopyWith<$Res> {
     Object? table = null,
   }) {
     return _then(_value.copyWith(
+      isLoading: null == isLoading
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -94,7 +101,8 @@ abstract class _$$TtsImplCopyWith<$Res> implements $TtsCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String name,
+      {bool isLoading,
+      String name,
       int col,
       int row,
       List<ItemDatas> items,
@@ -110,6 +118,7 @@ class __$$TtsImplCopyWithImpl<$Res> extends _$TtsCopyWithImpl<$Res, _$TtsImpl>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? isLoading = null,
     Object? name = null,
     Object? col = null,
     Object? row = null,
@@ -117,6 +126,10 @@ class __$$TtsImplCopyWithImpl<$Res> extends _$TtsCopyWithImpl<$Res, _$TtsImpl>
     Object? table = null,
   }) {
     return _then(_$TtsImpl(
+      isLoading: null == isLoading
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -145,7 +158,8 @@ class __$$TtsImplCopyWithImpl<$Res> extends _$TtsCopyWithImpl<$Res, _$TtsImpl>
 @JsonSerializable()
 class _$TtsImpl implements _Tts {
   const _$TtsImpl(
-      {required this.name,
+      {required this.isLoading,
+      required this.name,
       required this.col,
       required this.row,
       required final List<ItemDatas> items,
@@ -156,6 +170,8 @@ class _$TtsImpl implements _Tts {
   factory _$TtsImpl.fromJson(Map<String, dynamic> json) =>
       _$$TtsImplFromJson(json);
 
+  @override
+  final bool isLoading;
   @override
   final String name;
   @override
@@ -180,7 +196,7 @@ class _$TtsImpl implements _Tts {
 
   @override
   String toString() {
-    return 'Tts(name: $name, col: $col, row: $row, items: $items, table: $table)';
+    return 'Tts(isLoading: $isLoading, name: $name, col: $col, row: $row, items: $items, table: $table)';
   }
 
   @override
@@ -188,6 +204,8 @@ class _$TtsImpl implements _Tts {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TtsImpl &&
+            (identical(other.isLoading, isLoading) ||
+                other.isLoading == isLoading) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.col, col) || other.col == col) &&
             (identical(other.row, row) || other.row == row) &&
@@ -199,6 +217,7 @@ class _$TtsImpl implements _Tts {
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      isLoading,
       name,
       col,
       row,
@@ -221,7 +240,8 @@ class _$TtsImpl implements _Tts {
 
 abstract class _Tts implements Tts {
   const factory _Tts(
-      {required final String name,
+      {required final bool isLoading,
+      required final String name,
       required final int col,
       required final int row,
       required final List<ItemDatas> items,
@@ -229,6 +249,8 @@ abstract class _Tts implements Tts {
 
   factory _Tts.fromJson(Map<String, dynamic> json) = _$TtsImpl.fromJson;
 
+  @override
+  bool get isLoading;
   @override
   String get name;
   @override

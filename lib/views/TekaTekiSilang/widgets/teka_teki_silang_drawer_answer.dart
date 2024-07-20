@@ -20,6 +20,20 @@ class TekaTekiSilangDrawerAnswer extends ConsumerStatefulWidget {
 
 class _State extends ConsumerState<TekaTekiSilangDrawerAnswer> {
   TextEditingController textEditingController = TextEditingController();
+  final formKey = GlobalKey<FormState>();
+  String? errorText;
+
+  @override
+  void dispose() {
+    textEditingController.dispose();
+    super.dispose();
+  }
+
+  void setError(String error) {
+    setState(() {
+      errorText = error;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -92,52 +106,67 @@ class _State extends ConsumerState<TekaTekiSilangDrawerAnswer> {
             const SizedBox(height: 20),
             Align(
               alignment: Alignment.center,
-              child: Column(
-                children: [
-                  const Text(
-                    'PERTANYAAN',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const SizedBox(height: 5),
-                  Text(
-                    '${item.number}. ${item.title}',
-                    style: const TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  TextField(
-                    controller: textEditingController,
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      hintText: 'masukan jawaban anda disini',
-                    ),
-                    autofocus: true,
-                    inputFormatters: [
-                      UpperCaseTextFormatter(),
-                    ],
-                  ),
-                  const SizedBox(height: 20),
-                  ElevatedButton(
-                    onPressed: () => onPressed(item),
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5),
+              child: Form(
+                key: formKey,
+                child: Column(
+                  children: <Widget>[
+                    const Text(
+                      'PERTANYAAN',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                    child: const Text(
-                      'Jawab',
-                      style: TextStyle(
+                    const SizedBox(height: 5),
+                    Text(
+                      '${item.number}. ${item.title}',
+                      style: const TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
-                  ),
-                ],
+                    const SizedBox(height: 20),
+                    TextFormField(
+                      controller: textEditingController,
+                      decoration: InputDecoration(
+                        border: const OutlineInputBorder(),
+                        hintText: 'masukan jawaban anda disini',
+                        errorText: errorText,
+                      ),
+                      autofocus: true,
+                      inputFormatters: [
+                        UpperCaseTextFormatter(),
+                      ],
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'Jawaban tidak boleh kosong';
+                        }
+
+                        // validate length of answer
+                        if (value.length != item.answer.length) {
+                          return 'Kotak Jawaban memiliki panjang ${item.answer.length}';
+                        }
+                        return null;
+                      },
+                    ),
+                    const SizedBox(height: 20),
+                    ElevatedButton(
+                      onPressed: () => onPressed(item),
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                      ),
+                      child: const Text(
+                        'Jawab',
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             const SizedBox(height: 20),
@@ -148,15 +177,14 @@ class _State extends ConsumerState<TekaTekiSilangDrawerAnswer> {
   }
 
   void onPressed(ItemDatas item) {
-    if (item.answer.toLowerCase() == textEditingController.text.toLowerCase()) {
-      ref.read(ttsNotifierProvider.notifier).answerQuestion(item);
-      Navigator.pop(context);
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Jawaban Anda Salah'),
-        ),
-      );
+    if (formKey.currentState?.validate() == true) {
+      if (item.answer.toLowerCase() ==
+          textEditingController.text.toLowerCase()) {
+        ref.read(ttsNotifierProvider.notifier).answerQuestion(item);
+        Navigator.pop(context);
+      } else {
+        setError('Jawaban Anda Salah');
+      }
     }
   }
 }

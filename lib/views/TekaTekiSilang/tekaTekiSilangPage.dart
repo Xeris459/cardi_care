@@ -32,25 +32,25 @@ class _TekaTekiSilangState extends State<TekaTekiSilangPage> {
             ),
           ),
         ),
-        body: Stack(
+        body: const Stack(
           children: [
-            const TekaTekiSilangContainer(id: 'yTPWFL97mf7e3Eb4In1z'),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Align(
-                alignment: Alignment.bottomRight,
-                child: FloatingActionButton(
-                  onPressed: onPressedShowDrawerQuestion,
-                  backgroundColor: redColor,
-                  shape: const CircleBorder(),
-                  child: const Icon(
-                    Icons.question_mark,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            ),
-            const TekaTekiSilangScore(),
+            TekaTekiSilangContainer(id: 'yTPWFL97mf7e3Eb4In1z'),
+            // Padding(
+            //   padding: const EdgeInsets.all(8.0),
+            //   child: Align(
+            //     alignment: Alignment.bottomRight,
+            //     child: FloatingActionButton(
+            //       onPressed: onPressedShowDrawerQuestion,
+            //       backgroundColor: redColor,
+            //       shape: const CircleBorder(),
+            //       child: const Icon(
+            //         Icons.question_mark,
+            //         color: Colors.white,
+            //       ),
+            //     ),
+            //   ),
+            // ),
+            TekaTekiSilangScore(),
           ],
         ),
       ),

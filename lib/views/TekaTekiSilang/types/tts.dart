@@ -8,6 +8,7 @@ part 'tts.g.dart';
 @freezed
 class Tts with _$Tts {
   const factory Tts({
+    required bool isLoading,
     required String name,
     required int col,
     required int row,
